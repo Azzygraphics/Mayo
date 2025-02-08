@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Happy Valentine's Day Baby ❤️</title>
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	<link rel="stylesheet" href="mayo.css">
+</head>
+<body>
+	<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="VD.png" height="400" width="300">
+		</div>
+		<div class="details">
+			<h4 class="color1">میری جان ❤️</h4>
+			<h4 class="color2 margin">(HAPPY Valentine's Day)</h4>
+			<p>My Love, Maryam, ❤️</p>
+			<p>On this Valentine’s Day,</p>
+			<p>I just want to remind you that,</p>
+			<p>you are the most beautiful part of my life.</p>
+			<p>Every moment with you feels like a dream,</p>
+			<p>and my heart beats only for you. 💕</p>
+			<p>You are my love, happiness & everything.</p>
+			<p>With all my love 🌹✨,</p><br>
+			<p class="text-right">Happy Valentines Day, Maryam!</p>
+			<p class="text-right">♥ Abdulaziz</p>
+		</div>
+	</div>
+
+	<!-- Audio Player -->
+	<audio id="bg-music" src="New Project.mp3" loop></audio>
+
+	<script>
+		// Try to play the audio when the page loads
+		window.addEventListener('DOMContentLoaded', () => {
+			const audio = document.getElementById('bg-music');
+			audio.play().catch(error => {
+				console.log('Autoplay was blocked. Waiting for user interaction.');
+			});
+		});
+
+		// Play audio on first user interaction if autoplay was blocked
+		document.addEventListener('click', () => {
+			const audio = document.getElementById('bg-music');
+			if (audio.paused) {
+				audio.play();
+			}
+		});
+	</script>
+</body>
+</html>
